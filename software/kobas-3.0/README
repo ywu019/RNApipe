@@ -1,0 +1,38 @@
+          KOBAS 3.0
+
+This is a beta version of KOBAS 3.0.
+
+1. What is KOBAS 3.0?
+KOBAS 3.0 is an update of KOBAS 2.0 (KEGG Orthology Based Annotation System).
+Given a set of genes or protein, it can determine whether a pathway, disease,
+and Gene Ontology(GO) term shows statistically significant. For more details,
+please go to http://kobas.cbi.pku.edu.cn/help.php 
+
+
+2. How to install KOBAS 3.0?
+Please refer to install.txt under docs directory in KOBAS 3.0 source.
+
+
+3. How to use KOBAS 3.0?
+Please refer to tutorial.txt under docs directory in KOBAS 2.1.0 source.
+
+
+4. Contact
+Please report bugs, comments and suggestions to the email below.  Also, if
+you succeed in compiling this module under a platform other than Linux,
+please send us a note.
+
+Authors: Chen Ai, Chen Xie, Xianing Zheng, Xizeng Mao, Liping Wei, Lei Kong.
+Email:   kobas@mail.cbi.pku.edu.cn
+Web:     http://kobas.cbi.pku.edu.cn/
+
+
+The new function is run_mulmds, which can run multiple methods of enrichment analysis and give a comprehensive results.
+
+If you have prepared all the package (see docs/install.txt), you can run with this function use these commands:
+(for microarray data)
+'cd /path/to/kobas_home/; mkdir test/GSE1297; python scripts/run_mulmds.py -e test/GSE1297.exp.txt -p test/GSE1297.phe.txt -t ma -s hsa -i ncbigene -o test/GSE1297/GSE1297. '
+(for RNA-Seq data)
+'cd /path/to/kobas_home/; mkdir test/TCGA-LUAD; python scripts/run_mulmds.py -e test/TCGA-LUAD.entrezid.raw.counts.txt -p test/TCGA-LUAD.phe.txt -t rseq -s hsa -i ncbigene -o test/TCGA-LUAD/TCGA-LUAD. '
+
+The results is output to test/GSE1297/ or test/TCGA-LUAD/

@@ -1,0 +1,14 @@
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:B ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath G:G ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:K ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:p ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath G:S ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:R ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath D:k ensembl /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:B ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath G:G ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:K ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:p ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath G:S ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath P:R ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/
+python /gpfs/user/aic/kobas-3.0.0/src/kobas/gmt/getGmt.py ath D:k ncbigene /gpfs/user/aic/kobas-3.0.0//gmt/

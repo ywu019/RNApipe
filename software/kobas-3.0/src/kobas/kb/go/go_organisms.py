@@ -1,0 +1,23 @@
+##only keep species having at least 100 annotated gene products
+go_organisms = (
+    ('gene_association.tair', 'gp2protein.tair', '3702', 'ath'),
+    ('gene_association.aspgd', 'gp2protein.aspgd', '162425|5061|5062|746128', 'ani|ang|aor|afm'),
+    ('gene_association.jcvi', 'gp2protein.jcvi', '167879|195099|195103|198094|205920|211586|212042|220664|222891|223283|227377|228405|243164|243231|243233|246194|246200|264730|265669|686', 'cps|cjr|cpf|ban|ech|son|aph|pfl|nse|pst|cbu|hne|det|gsu|mca|chy|sil|psp|lmf|vch'),
+    ('gene_association.goa_cow', 'not_need', '9913', 'bta'),
+    ('gene_association.wb', 'gp2protein.wb', '6239', 'cel'),
+    ('gene_association.cgd', 'gp2protein.cgd', '42374|5476|5478', 'cdu|cal|cgr'),
+    ('gene_association.goa_dog', 'not_need', '9615', 'cfa'),
+    ('gene_association.zfin', 'gp2protein.zfin', '7955', 'dre'),
+    ('gene_association.dictyBase', 'gp2protein.dictyBase', '44689', 'ddi'),
+    ('gene_association.fb', 'gp2protein.fb', '7227', 'dme'),
+    ('gene_association.ecocyc', 'not_need', '83333', 'eco'),
+    ('gene_association.goa_chicken', 'not_need', '9031', 'gga'),
+    ('gene_association.goa_human', 'not_need', '9606', 'hsa'),
+    ('gene_association.mgi', 'gp2protein.mgi', '10090', 'mmu'),
+    ('gene_association.gramene_oryza', 'not_need', '39947', 'osa'),
+    ('gene_association.GeneDB_Pfalciparum', 'gp2protein.GeneDB_Pfalciparum', '5833', 'pfa'),
+    ('gene_association.rgd', 'gp2protein.rgd', '10116', 'rno'),
+    ('gene_association.sgd', 'gp2protein.sgd', '559292', 'sce'),
+    ('gene_association.pombase', 'gp2protein.pombase', '4896', 'spo'),
+    ('gene_association.goa_pig', 'not_need', '9823', 'ssc'),
+    ('gene_association.goa_uniprot_noiea', 'not_need', '100226|1111708|170187|1773|208964|224308|242507|3055|312017|367110|46245|6238|7165|7220|7238|7240|7244|7245|8355|8364|9544|9595|9598|9601|9646|9796', 'sco|syn|spn|mtu|pae|bsu|mgr|cre|tet|ncr|dpo|cbr|aga|der|dse|dsi|dvi|dya|xla|xtr|mcc|ggo|ptr|pon|aml|ecb'))

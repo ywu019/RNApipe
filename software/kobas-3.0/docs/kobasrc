@@ -1,0 +1,14 @@
+[DEFAULT]
+kobas_home = 
+blast_home =
+
+[KOBAS]
+kobasdb = %(kobas_home)s/sqlite3/
+gmt = %(kobas_home)s/gmt/
+grn = %(kobas_home)s/grn/
+model = %(kobas_home)s/model/
+
+[BLAST]
+blastp = %(blast_home)s/blastp
+blastx = %(blast_home)s/blastx
+blastdb = %(kobas_home)s/seq_pep/

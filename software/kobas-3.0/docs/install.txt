@@ -1,0 +1,184 @@
+###########################
+##   INSTALLATION GUIDE  ##
+###########################
+
+=============================
+1. How to install KOBAS 3.0.0-beta
+=============================
+This document will instruct you how to install KOBAS 3.0.0  
+
+=============================
+2. Install required softwares
+=============================
+Please install these softwares as follows beforehand: 
+* Python (>= 2.3 and not 3.x)
+* SQLite (3.x) and PySQLite (2.x)
+* BioPython (>= 1.4.3)
+* NCBI BLAST+ Standalone Edition
+* R (>= 2.0), QVALUE and RPy2
+* Numpy (>= 1.8.0)
+* Pandas (>= 0.17.1)
+
+* R package:
+. EnrichmentBrowser  (R CMD INSTALL EnrichmentBrowser_2.4.5_CA_edit.tar.gz [this file is under kobas home])
+. GSVA
+. gage
+
+
+.. Python: http://www.python.org
+.. SQLite: http://www.sqlite.org
+.. PySQLite: http://pysqlite.org
+.. BioPython: http://biopython.org
+.. NCBI BLAST+ Standalone Edition: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+.. R: http://www.r-project.org
+.. QVALUE: http://www.bioconductor.org/packages/release/bioc/html/qvalue.html
+.. RPy2: http://rpy.sourceforge.net/rpy2.html
+.. Numpy: http://www.numpy.org/
+.. pandas: http://pandas.pydata.org/
+
+=====================================
+3. Download and Installation Guidance
+=====================================
+---------
+ QVALUE 
+---------
+Download: http://www.bioconductor.org/packages/release/bioc/html/qvalue.html
+Installation:
+              Start R and enter:
+              source("http://bioconductor.org/biocLite.R")
+              biocLite("qvalue")
+OR
+        
+              R CMD INSTALL -l /home/your_username/R_libs qvalue_x.x.x.tar.gz
+--------
+  RPy2 
+--------
+Download: https://pypi.python.org/pypi/rpy2
+Version: >= 2.2.4
+Installation: 
+              tar -xzf rpy_package.tar.gz
+              cd rpy_package
+              python setup.py build --r-home /opt/packages/R/lib install
+-----------
+ BioPython
+-----------
+Download: http://biopython.org/wiki/Download
+Installation: 
+              tar -xzvpf biopython-x.x.tar.gz.
+              cd biopython-x.x
+              python setup.py install --home=$HOME
+This will install the package into someplace like $HOME/lib/python2.5/site-packages.
+You'll need to subsequently modify the PYTHONPATH environmental variable to include this directory so python will be able to find the installation.
+---------
+PySQLite
+----------
+Download: https://pypi.python.org/pypi/pysqlite
+Installation: 
+              tar -zxf pysqlite-x.x.x.tar.gz
+              cd pysqlite-x.x.x
+              (edit the setup.cfg file: change include_dirs and library_dirs to the PATH you want to install.)
+              python setup.py build
+              python setup.py install
+---------
+ BLAST+
+---------
+Download: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+Installation: 
+              tar -zvf ncbi-blast-x.x.x+-x64-linux.tar.gz
+              export PATH="$PATH:$HOME/ncbi-blast-2.2.29+/bin" (or add path to your .bashrc)
+-------
+Numpy
+-------
+Download & Installation: 
+please refer to http://www.numpy.org/
+
+--------
+pandas 
+--------
+Download & Installation:
+please refer to http://pandas.pydata.org/
+
+-----------
+matplotlib
+-----------
+Dowload & Installation:
+please refer to http://matplotlib.org/
+
+=========================
+	4. Install KOBAS
+=========================
+Make sure that the above packages have been installed and that your Python
+distribution contains distutils modules.  
+KOBAS download website: http://kobas.cbi.pku.edu.cn/download.do
+-----------------------------------
+4.1 Download KOBAS program package
+-----------------------------------
+	KOBAS download website: http://kobas.cbi.pku.edu.cn/download.do
+	* Download the KOBAS program package from KOBAS download website.
+	* `tar -xzf kobas-3.0.0-beta.tar.gz`
+	Then you will see this data structure:
+	kobas_home/
+		|
+		|-----README : introduce how to install kobas and how to use it.
+		|
+		|-----scripts : run KOBAS program.
+		|
+		|-----seq_pep : store FASTA format protein sequence files of KO and all supported species 
+		|				downloaded from http://kobas.cbi.pku.edu.cn/site/download_fasta.jsp
+		|
+		|-----sqlite3 : store backend databases of KO and all supported species 
+		|				downloaded from http://kobas.cbi.pku.edu.cn/site/download_db.jsp
+		|
+		|-----src : store KOBAS source codes.
+		|
+		|-----test : store example data for testing KOBAS.
+
+------------------------
+4.2 Prepare KOBAS DATA
+------------------------
+	There are two part of data behind KOBAS:
+		** FASTA format protein sequence files of KO and all supported species
+			KOBAS sequence files download website: http://kobas.cbi.pku.edu.cn/site/download_fasta.jsp
+		** Backend databases of KO and all supported species
+			KOBAS Backend databases download website: http://kobas.cbi.pku.edu.cn/site/download_db.jsp
+
+	* Download the KOBAS organism data package (organism.db.gz) from KOBAS Backend databases download website
+	* Download the KOBAS specific species data package from KOBAS Backend databases download website (for example, hsa.db.gz)
+	* Download the specific sequence file from KOBAS sequence files download website (for example, hsa.pep.fasta.gz)
+	* `gunzip organism.db.gz`
+	* `gunzip hsa.db.gz`
+	* Move all databases into ${kobas_home}/sqlite3/ (for example, organism.db, hsa.db)
+	* `gunzip hsa.pep.fasta.gz`
+	* Move the fasta sequence file into ${kobas_home}/seq_pep/
+	* `makeblastdb -in hsa.pep.fasta -dbtype prot`
+
+---------------------------------------
+4.3 Configure KOBAS Running Environment
+---------------------------------------
+	* Add the location of kobas-3.0.0-beta/src into PYTHONPATH in ~/.bashrc (or other similar methods)
+	* Copy kobas2.1/docs/kobasrc to ~/ and change its name to .kobasrc, modify "kobas_home" in 
+		 .kobasrc to make sure the location of KOBAS data is correct.
+	* Modify "blast_home" in ~/.kobasrc	
+
+	## What is .kobasrc ?
+	## It is a file for telling KOBAS program where to find FASTA format protein sequence files, Backend databases and blast program. It look like this:
+	   ---------------------------	
+		[DEFAULT]
+		kobas_home =	# path to kobas whole package, which is parent directory of "kobasdb" and "blastdb"
+		blast_home =	# path to parent directory of blastp and blastx 
+
+		[KOBAS]
+		kobasdb	= %(kobas_home)s/sqlite3/	# path to Backend databases of KO and all supported species, if you don't want to state it by kobas_home, 
+											# you can also write the absolute path after "="
+
+		[BLAST]
+		blastp = %(blast_home)s/blastp		# path to program blastp
+		blastx = %(blast_home)s/blastx		# path to program blastx
+		blastdb = %(kobas_home)s/seq_pep/	# path to FASTA format protein sequence files of KO and all supported species
+	 -----------------------------
+
+	Note: Since kobas-3.0.0-beta, we have supported configure KOBAS running environment via command line. If you don't modify ~/.kobasrc, 
+		you can use command line option(-k,v,y,q,p,x) to state clearly the location of KOBAS data and blast program. For more details, 
+		see tutorial.txt or use command line option -h to see help document. 
+
+
