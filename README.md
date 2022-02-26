@@ -3,7 +3,8 @@
 ## 1. Installation
 ### 1.1 Install Miniconda
 As this workflow is based on the workflow management system snakemake and conda.
-We strongly recommend installing miniconda3 with python3.7.
+We strongly recommend installing miniconda3 with python3.
+For specific installation methods and usage methods of RNApipe, please refer to the RNApipe_Documentation.pdf.
 ###  1.2 Install RNApipe
 Clone the repository:
 ```
@@ -11,7 +12,7 @@ git clone https://github.com/ywu019/RNApipe.git
 ```
 Create the environment:
 ```
-conda env create -n RNApipe -f env.yaml
+conda env create -n RNApipe -f envs/envs.yaml
 ```
 Activate the environment:
 ```
