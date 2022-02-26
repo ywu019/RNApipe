@@ -1,0 +1,135 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+Counts2tpm           1              1              1
+all                  1              1              1
+featureCounts        1              1              1
+total                3              1              1
+
+Select jobs to execute...
+
+[Sat Feb 26 11:02:49 2022]
+rule featureCounts:
+    input: project/example_data/output/align/hisat2/root_1.sort.bam, project/example_data/output/align/hisat2/root_2.sort.bam, project/example_data/output/align/hisat2/root_3.sort.bam, project/example_data/output/align/hisat2/shoot_1.sort.bam, project/example_data/output/align/hisat2/shoot_2.sort.bam, project/example_data/output/align/hisat2/shoot_3.sort.bam, project/example_data/ref/At10_new.gtf
+    output: project/example_data/output/quantify/featureCounts/genome.tsv
+    jobid: 2
+    resources: tmpdir=/tmp
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.1
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 6 BAM files                                      ||
+||                           o root_1.sort.bam                                ||
+||                           o root_2.sort.bam                                ||
+||                           o root_3.sort.bam                                ||
+||                           o shoot_1.sort.bam                               ||
+||                           o shoot_2.sort.bam                               ||
+||                           o shoot_3.sort.bam                               ||
+||                                                                            ||
+||             Output file : genome.tsv                                       ||
+||                 Summary : genome.tsv.summary                               ||
+||              Annotation : At10_new.gtf (GTF)                               ||
+||      Dir for temp files : project/example_data/output/quantify/feature ... ||
+||                                                                            ||
+||                 Threads : 10                                               ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file At10_new.gtf ...                                      ||
+||    Features : 324653                                                       ||
+||    Meta-features : 38185                                                   ||
+||    Chromosomes/contigs : 7                                                 ||
+||                                                                            ||
+|| Process BAM file root_1.sort.bam...                                        ||
+||    Single-end reads are included.                                          ||
+||    Total alignments : 56764                                                ||
+||    Successfully assigned alignments : 9524 (16.8%)                         ||
+||    Running time : 0.00 minutes                                             ||
+||                                                                            ||
+|| Process BAM file root_2.sort.bam...                                        ||
+||    Single-end reads are included.                                          ||
+||    Total alignments : 57304                                                ||
+||    Successfully assigned alignments : 9467 (16.5%)                         ||
+||    Running time : 0.00 minutes                                             ||
+||                                                                            ||
+|| Process BAM file root_3.sort.bam...                                        ||
+||    Single-end reads are included.                                          ||
+||    Total alignments : 55884                                                ||
+||    Successfully assigned alignments : 9241 (16.5%)                         ||
+||    Running time : 0.00 minutes                                             ||
+||                                                                            ||
+|| Process BAM file shoot_1.sort.bam...                                       ||
+||    Single-end reads are included.                                          ||
+||    Total alignments : 45773                                                ||
+||    Successfully assigned alignments : 7782 (17.0%)                         ||
+||    Running time : 0.00 minutes                                             ||
+||                                                                            ||
+|| Process BAM file shoot_2.sort.bam...                                       ||
+||    Single-end reads are included.                                          ||
+||    Total alignments : 46334                                                ||
+||    Successfully assigned alignments : 8359 (18.0%)                         ||
+||    Running time : 0.00 minutes                                             ||
+||                                                                            ||
+|| Process BAM file shoot_3.sort.bam...                                       ||
+||    Single-end reads are included.                                          ||
+||    Total alignments : 47368                                                ||
+||    Successfully assigned alignments : 8333 (17.6%)                         ||
+||    Running time : 0.00 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "project/example_data/ou  ||
+|| tput/quantify/featureCounts/genome.tsv.summary"                            ||
+||                                                                            ||
+\\============================================================================//
+
+[Sat Feb 26 11:02:51 2022]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:51 2022]
+rule Counts2tpm:
+    input: project/example_data/output/quantify/featureCounts/genome.tsv
+    output: project/example_data/output/quantify/featureCounts/genome_tpm.tsv, project/example_data/output/quantify/featureCounts/genome_count.tsv
+    jobid: 1
+    resources: tmpdir=/tmp
+
+/home/zpzhou/software/conda3/envs/R_package/lib/python3.7/site-packages/pandas/core/arraylike.py:364: RuntimeWarning: divide by zero encountered in log
+  result = getattr(ufunc, method)(*inputs, **kwargs)
+Removing temporary output file project/example_data/output/quantify/featureCounts/genome.tsv.
+[Sat Feb 26 11:02:53 2022]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:53 2022]
+localrule all:
+    input: project/example_data/output/quantify/featureCounts/genome_tpm.tsv
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Sat Feb 26 11:02:53 2022]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /home/zpzhou/wuyue/snakemake/RNApipe/.snakemake/log/2022-02-26T110248.680707.snakemake.log

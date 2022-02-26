@@ -1,0 +1,226 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+hisat2        6              1              1
+sort          6              1              1
+total        13              1              1
+
+Select jobs to execute...
+
+[Sat Feb 26 11:02:46 2022]
+rule hisat2:
+    input: project/example_data/output/trim/fastp/root_1_trimmed.fastq.gz, project/example_data/ref/hisat2/splicesites.txt
+    output: project/example_data/output/align/hisat2/root_1.sam, project/example_data/output/align/hisat2/root_1.bam
+    jobid: 2
+    wildcards: condition=root, replicate=1
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:46 2022]
+rule hisat2:
+    input: project/example_data/output/trim/fastp/root_3_trimmed.fastq.gz, project/example_data/ref/hisat2/splicesites.txt
+    output: project/example_data/output/align/hisat2/root_3.sam, project/example_data/output/align/hisat2/root_3.bam
+    jobid: 7
+    wildcards: condition=root, replicate=3
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:46 2022]
+rule hisat2:
+    input: project/example_data/output/trim/fastp/shoot_3_trimmed.fastq.gz, project/example_data/ref/hisat2/splicesites.txt
+    output: project/example_data/output/align/hisat2/shoot_3.sam, project/example_data/output/align/hisat2/shoot_3.bam
+    jobid: 13
+    wildcards: condition=shoot, replicate=3
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:46 2022]
+rule hisat2:
+    input: project/example_data/output/trim/fastp/root_2_trimmed.fastq.gz, project/example_data/ref/hisat2/splicesites.txt
+    output: project/example_data/output/align/hisat2/root_2.sam, project/example_data/output/align/hisat2/root_2.bam
+    jobid: 5
+    wildcards: condition=root, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:46 2022]
+rule hisat2:
+    input: project/example_data/output/trim/fastp/shoot_2_trimmed.fastq.gz, project/example_data/ref/hisat2/splicesites.txt
+    output: project/example_data/output/align/hisat2/shoot_2.sam, project/example_data/output/align/hisat2/shoot_2.bam
+    jobid: 11
+    wildcards: condition=shoot, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:46 2022]
+rule hisat2:
+    input: project/example_data/output/trim/fastp/shoot_1_trimmed.fastq.gz, project/example_data/ref/hisat2/splicesites.txt
+    output: project/example_data/output/align/hisat2/shoot_1.sam, project/example_data/output/align/hisat2/shoot_1.bam
+    jobid: 9
+    wildcards: condition=shoot, replicate=1
+    resources: tmpdir=/tmp
+
+24431 reads; of these:
+  24431 (100.00%) were unpaired; of these:
+    2729 (11.17%) aligned 0 times
+    11150 (45.64%) aligned exactly 1 time
+    10552 (43.19%) aligned >1 times
+88.83% overall alignment rate
+23963 reads; of these:
+  23963 (100.00%) were unpaired; of these:
+    2732 (11.40%) aligned 0 times
+    10827 (45.18%) aligned exactly 1 time
+    10404 (43.42%) aligned >1 times
+88.60% overall alignment rate
+23666 reads; of these:
+  23666 (100.00%) were unpaired; of these:
+    3122 (13.19%) aligned 0 times
+    12088 (51.08%) aligned exactly 1 time
+    8456 (35.73%) aligned >1 times
+86.81% overall alignment rate
+23490 reads; of these:
+  23490 (100.00%) were unpaired; of these:
+    3932 (16.74%) aligned 0 times
+    11193 (47.65%) aligned exactly 1 time
+    8365 (35.61%) aligned >1 times
+83.26% overall alignment rate
+24033 reads; of these:
+  24033 (100.00%) were unpaired; of these:
+    3280 (13.65%) aligned 0 times
+    11955 (49.74%) aligned exactly 1 time
+    8798 (36.61%) aligned >1 times
+86.35% overall alignment rate
+24554 reads; of these:
+  24554 (100.00%) were unpaired; of these:
+    2690 (10.96%) aligned 0 times
+    11183 (45.54%) aligned exactly 1 time
+    10681 (43.50%) aligned >1 times
+89.04% overall alignment rate
+Removing temporary output file project/example_data/output/align/hisat2/root_3.sam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 7.
+1 of 13 steps (8%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:47 2022]
+rule sort:
+    input: project/example_data/output/align/hisat2/root_3.bam
+    output: project/example_data/output/align/hisat2/root_3.sort.bam
+    jobid: 6
+    wildcards: condition=root, replicate=3
+    resources: tmpdir=/tmp
+
+Removing temporary output file project/example_data/output/align/hisat2/shoot_2.sam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 11.
+2 of 13 steps (15%) done
+Removing temporary output file project/example_data/output/align/hisat2/root_1.sam.
+[bam_sort_core] merging from 0 files and 10 in-memory blocks...
+[Sat Feb 26 11:02:47 2022]
+Finished job 2.
+3 of 13 steps (23%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:47 2022]
+rule sort:
+    input: project/example_data/output/align/hisat2/shoot_2.bam
+    output: project/example_data/output/align/hisat2/shoot_2.sort.bam
+    jobid: 10
+    wildcards: condition=shoot, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:47 2022]
+rule sort:
+    input: project/example_data/output/align/hisat2/root_1.bam
+    output: project/example_data/output/align/hisat2/root_1.sort.bam
+    jobid: 1
+    wildcards: condition=root, replicate=1
+    resources: tmpdir=/tmp
+
+[bam_sort_core] merging from 0 files and 10 in-memory blocks...
+Removing temporary output file project/example_data/output/align/hisat2/shoot_1.sam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 9.
+4 of 13 steps (31%) done
+[bam_sort_core] merging from 0 files and 10 in-memory blocks...
+Removing temporary output file project/example_data/output/align/hisat2/shoot_3.sam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 13.
+5 of 13 steps (38%) done
+Removing temporary output file project/example_data/output/align/hisat2/root_2.sam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 5.
+6 of 13 steps (46%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:47 2022]
+rule sort:
+    input: project/example_data/output/align/hisat2/shoot_1.bam
+    output: project/example_data/output/align/hisat2/shoot_1.sort.bam
+    jobid: 8
+    wildcards: condition=shoot, replicate=1
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:47 2022]
+rule sort:
+    input: project/example_data/output/align/hisat2/root_2.bam
+    output: project/example_data/output/align/hisat2/root_2.sort.bam
+    jobid: 4
+    wildcards: condition=root, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:47 2022]
+rule sort:
+    input: project/example_data/output/align/hisat2/shoot_3.bam
+    output: project/example_data/output/align/hisat2/shoot_3.sort.bam
+    jobid: 12
+    wildcards: condition=shoot, replicate=3
+    resources: tmpdir=/tmp
+
+[bam_sort_core] merging from 0 files and 10 in-memory blocks...
+Removing temporary output file project/example_data/output/align/hisat2/root_3.bam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 6.
+7 of 13 steps (54%) done
+[bam_sort_core] merging from 0 files and 10 in-memory blocks...
+Removing temporary output file project/example_data/output/align/hisat2/shoot_2.bam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 10.
+8 of 13 steps (62%) done
+Removing temporary output file project/example_data/output/align/hisat2/root_1.bam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 1.
+9 of 13 steps (69%) done
+[bam_sort_core] merging from 0 files and 10 in-memory blocks...
+Removing temporary output file project/example_data/output/align/hisat2/shoot_1.bam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 8.
+10 of 13 steps (77%) done
+Removing temporary output file project/example_data/output/align/hisat2/root_2.bam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 4.
+11 of 13 steps (85%) done
+Removing temporary output file project/example_data/output/align/hisat2/shoot_3.bam.
+[Sat Feb 26 11:02:47 2022]
+Finished job 12.
+12 of 13 steps (92%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:47 2022]
+localrule all:
+    input: project/example_data/output/align/hisat2/root_1.sort.bam, project/example_data/output/align/hisat2/root_2.sort.bam, project/example_data/output/align/hisat2/root_3.sort.bam, project/example_data/output/align/hisat2/shoot_1.sort.bam, project/example_data/output/align/hisat2/shoot_2.sort.bam, project/example_data/output/align/hisat2/shoot_3.sort.bam
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Sat Feb 26 11:02:47 2022]
+Finished job 0.
+13 of 13 steps (100%) done
+Complete log: /home/zpzhou/wuyue/snakemake/RNApipe/.snakemake/log/2022-02-26T110243.853089.snakemake.log

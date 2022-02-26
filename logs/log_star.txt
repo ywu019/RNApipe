@@ -1,0 +1,3 @@
+Building DAG of jobs...
+Nothing to be done (all requested files are present and up to date).
+Complete log: /home/zpzhou/wuyue/snakemake/RNApipe/.snakemake/log/2022-02-26T112211.096667.snakemake.log

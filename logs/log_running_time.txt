@@ -1,0 +1,44 @@
+
+Project name: example_data
+Start time: Sat Feb 26 10:49:14 2022
+Time of running trimming:0:03:45
+Time of running mapping:0:00:08
+Time of running quantifying:0:00:18
+Time of running visualization:0:00:35
+Time of running multiqc:0:00:17
+Time of running DEA genome based:0:00:43
+Time of running Functional annotation:0:01:41
+Time of running GSEA:0:02:34
+
+Project name: example_data
+Start time: Sat Feb 26 11:02:23 2022
+Time of running trimming:0:00:17
+Time of running mapping:0:00:07
+Time of running quantifying:0:00:05
+Time of running visualization:0:00:12
+Time of running multiqc:0:00:22
+Time of running DEA genome based:0:00:36
+Time of running Functional annotation:0:01:12
+Time of running GSEA:0:01:45
+
+Project name: example_data
+Start time: Sat Feb 26 11:14:09 2022
+Time of running trimming:0:00:11
+Time of running mapping:0:01:26
+Time of running quantifying:0:00:35
+Time of running visualization:0:00:11
+Time of running multiqc:0:00:14
+Time of running DEA genome based:0:00:13
+Time of running Functional annotation:0:00:01
+Time of running GSEA:0:01:24
+
+Project name: example_data
+Start time: Sat Feb 26 11:22:07 2022
+Time of running trimming:0:00:03
+Time of running mapping:0:00:03
+Time of running quantifying:0:00:06
+Time of running visualization:0:00:03
+Time of running multiqc:0:00:05
+Time of running DEA genome based:0:00:24
+Time of running Functional annotation:0:00:06
+Time of running GSEA:0:00:20

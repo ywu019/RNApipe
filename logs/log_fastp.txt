@@ -1,0 +1,489 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+all                  1              1              1
+fastp                6              1              1
+fastqc               6              1              1
+summaryReport        1              1              1
+total               14              1              1
+
+Select jobs to execute...
+
+[Sat Feb 26 11:02:27 2022]
+rule fastp:
+    input: project/example_data/fastq/root_1.fastq.gz
+    output: project/example_data/output/trim/fastp/root_1_trimmed.fastq.gz
+    log: project/example_data/output/trim/fastp/root_1.fastp.html, project/example_data/output/trim/fastp/root_1.fastp.json
+    jobid: 3
+    wildcards: condition=root, replicate=1
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:27 2022]
+rule fastp:
+    input: project/example_data/fastq/root_2.fastq.gz
+    output: project/example_data/output/trim/fastp/root_2_trimmed.fastq.gz
+    log: project/example_data/output/trim/fastp/root_2.fastp.html, project/example_data/output/trim/fastp/root_2.fastp.json
+    jobid: 5
+    wildcards: condition=root, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:27 2022]
+rule fastp:
+    input: project/example_data/fastq/root_3.fastq.gz
+    output: project/example_data/output/trim/fastp/root_3_trimmed.fastq.gz
+    log: project/example_data/output/trim/fastp/root_3.fastp.html, project/example_data/output/trim/fastp/root_3.fastp.json
+    jobid: 7
+    wildcards: condition=root, replicate=3
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:27 2022]
+rule fastp:
+    input: project/example_data/fastq/shoot_1.fastq.gz
+    output: project/example_data/output/trim/fastp/shoot_1_trimmed.fastq.gz
+    log: project/example_data/output/trim/fastp/shoot_1.fastp.html, project/example_data/output/trim/fastp/shoot_1.fastp.json
+    jobid: 9
+    wildcards: condition=shoot, replicate=1
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:27 2022]
+rule fastp:
+    input: project/example_data/fastq/shoot_2.fastq.gz
+    output: project/example_data/output/trim/fastp/shoot_2_trimmed.fastq.gz
+    log: project/example_data/output/trim/fastp/shoot_2.fastp.html, project/example_data/output/trim/fastp/shoot_2.fastp.json
+    jobid: 11
+    wildcards: condition=shoot, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:27 2022]
+rule fastp:
+    input: project/example_data/fastq/shoot_3.fastq.gz
+    output: project/example_data/output/trim/fastp/shoot_3_trimmed.fastq.gz
+    log: project/example_data/output/trim/fastp/shoot_3.fastp.html, project/example_data/output/trim/fastp/shoot_3.fastp.json
+    jobid: 13
+    wildcards: condition=shoot, replicate=3
+    resources: tmpdir=/tmp
+
+Read1 before filtering:
+total reads: 25000
+total bases: 1250000
+Q20 bases: 1236008(98.8806%)
+Q30 bases: 1224721(97.9777%)
+
+Read1 after filtering:
+total reads: 23963
+total bases: 804059
+Q20 bases: 794241(98.7789%)
+Q30 bases: 786714(97.8428%)
+
+Filtering result:
+reads passed filter: 23963
+reads failed due to low quality: 1
+reads failed due to too many N: 0
+reads failed due to too short: 1036
+reads with adapter trimmed: 24200
+bases trimmed due to adapters: 434815
+
+Duplication rate (may be overestimated since this is SE data): 28.228%
+Read1 before filtering:
+total reads: 25000
+total bases: 1250000
+Q20 bases: 1237532(99.0026%)
+Q30 bases: 1226361(98.1089%)
+
+Read1 after filtering:
+total reads: 23666
+total bases: 789496
+Q20 bases: 781459(98.982%)
+Q30 bases: 774425(98.0911%)
+
+Filtering result:
+reads passed filter: 23666
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 1334
+reads with adapter trimmed: 24445
+bases trimmed due to adapters: 447072
+
+Duplication rate (may be overestimated since this is SE data): 31.08%
+Read1 before filtering:
+total reads: 25000
+total bases: 1250000
+Q20 bases: 1237655(99.0124%)
+Q30 bases: 1226676(98.1341%)
+
+Read1 after filtering:
+total reads: 24431
+total bases: 821429
+Q20 bases: 813106(98.9868%)
+Q30 bases: 805778(98.0947%)
+
+Filtering result:
+reads passed filter: 24431
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 569
+reads with adapter trimmed: 24355
+bases trimmed due to adapters: 421323
+
+Duplication rate (may be overestimated since this is SE data): 27.092%
+Read1 before filtering:
+total reads: 25000
+total bases: 1250000
+Q20 bases: 1236302(98.9042%)
+Q30 bases: 1224433(97.9546%)
+
+Read1 after filtering:
+total reads: 24554
+total bases: 814979
+Q20 bases: 805753(98.8679%)
+Q30 bases: 797971(97.9131%)
+
+Filtering result:
+reads passed filter: 24554
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 446
+reads with adapter trimmed: 24441
+bases trimmed due to adapters: 429183
+
+Duplication rate (may be overestimated since this is SE data): 27.608%
+Read1 before filtering:
+total reads: 25000
+total bases: 1250000
+Q20 bases: 1236746(98.9397%)
+Q30 bases: 1225422(98.0338%)
+
+Read1 after filtering:
+total reads: 23490
+total bases: 753258
+Q20 bases: 744955(98.8977%)
+Q30 bases: 738078(97.9848%)
+
+Filtering result:
+reads passed filter: 23490
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 1510
+reads with adapter trimmed: 24329
+bases trimmed due to adapters: 481284
+
+Duplication rate (may be overestimated since this is SE data): 27.684%
+
+JSON report: project/example_data/output/trim/fastp/root_3.fastp.json
+HTML report: project/example_data/output/trim/fastp/root_3.fastp.html
+
+fastp -w 10 -a AGATCGGAAGAGC -i project/example_data/fastq/root_3.fastq.gz -o project/example_data/output/trim/fastp/root_3_trimmed.fastq.gz --length_required 20 -h project/example_data/output/trim/fastp/root_3.fastp.html -j project/example_data/output/trim/fastp/root_3.fastp.json 
+fastp v0.23.2, time used: 0 seconds
+
+JSON report: project/example_data/output/trim/fastp/root_1.fastp.json
+HTML report: project/example_data/output/trim/fastp/root_1.fastp.html
+
+fastp -w 10 -a AGATCGGAAGAGC -i project/example_data/fastq/root_1.fastq.gz -o project/example_data/output/trim/fastp/root_1_trimmed.fastq.gz --length_required 20 -h project/example_data/output/trim/fastp/root_1.fastp.html -j project/example_data/output/trim/fastp/root_1.fastp.json 
+fastp v0.23.2, time used: 0 seconds
+Read1 before filtering:
+total reads: 25000
+total bases: 1250000
+Q20 bases: 1238202(99.0562%)
+Q30 bases: 1227220(98.1776%)
+
+Read1 after filtering:
+total reads: 24033
+total bases: 787470
+Q20 bases: 779619(99.003%)
+Q30 bases: 772496(98.0985%)
+
+Filtering result:
+reads passed filter: 24033
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 967
+reads with adapter trimmed: 24504
+bases trimmed due to adapters: 452190
+
+Duplication rate (may be overestimated since this is SE data): 31.432%
+
+JSON report: project/example_data/output/trim/fastp/shoot_2.fastp.json
+HTML report: project/example_data/output/trim/fastp/shoot_2.fastp.html
+
+fastp -w 10 -a AGATCGGAAGAGC -i project/example_data/fastq/shoot_2.fastq.gz -o project/example_data/output/trim/fastp/shoot_2_trimmed.fastq.gz --length_required 20 -h project/example_data/output/trim/fastp/shoot_2.fastp.html -j project/example_data/output/trim/fastp/shoot_2.fastp.json 
+fastp v0.23.2, time used: 0 seconds
+
+JSON report: project/example_data/output/trim/fastp/root_2.fastp.json
+HTML report: project/example_data/output/trim/fastp/root_2.fastp.html
+
+fastp -w 10 -a AGATCGGAAGAGC -i project/example_data/fastq/root_2.fastq.gz -o project/example_data/output/trim/fastp/root_2_trimmed.fastq.gz --length_required 20 -h project/example_data/output/trim/fastp/root_2.fastp.html -j project/example_data/output/trim/fastp/root_2.fastp.json 
+fastp v0.23.2, time used: 0 seconds
+
+JSON report: project/example_data/output/trim/fastp/shoot_1.fastp.json
+HTML report: project/example_data/output/trim/fastp/shoot_1.fastp.html
+
+fastp -w 10 -a AGATCGGAAGAGC -i project/example_data/fastq/shoot_1.fastq.gz -o project/example_data/output/trim/fastp/shoot_1_trimmed.fastq.gz --length_required 20 -h project/example_data/output/trim/fastp/shoot_1.fastp.html -j project/example_data/output/trim/fastp/shoot_1.fastp.json 
+fastp v0.23.2, time used: 0 seconds
+[Sat Feb 26 11:02:27 2022]
+Finished job 7.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:27 2022]
+rule fastqc:
+    input: project/example_data/output/trim/fastp/root_3_trimmed.fastq.gz
+    output: project/example_data/output/trim/fastp/fastqc_after_trimming/root_3_trimmed_fastqc.html
+    jobid: 6
+    wildcards: condition=root, replicate=3
+    resources: tmpdir=/tmp
+
+
+JSON report: project/example_data/output/trim/fastp/shoot_3.fastp.json
+HTML report: project/example_data/output/trim/fastp/shoot_3.fastp.html
+
+fastp -w 10 -a AGATCGGAAGAGC -i project/example_data/fastq/shoot_3.fastq.gz -o project/example_data/output/trim/fastp/shoot_3_trimmed.fastq.gz --length_required 20 -h project/example_data/output/trim/fastp/shoot_3.fastp.html -j project/example_data/output/trim/fastp/shoot_3.fastp.json 
+fastp v0.23.2, time used: 0 seconds
+[Sat Feb 26 11:02:27 2022]
+Finished job 3.
+2 of 14 steps (14%) done
+[Sat Feb 26 11:02:27 2022]
+Finished job 11.
+3 of 14 steps (21%) done
+[Sat Feb 26 11:02:27 2022]
+Finished job 5.
+4 of 14 steps (29%) done
+[Sat Feb 26 11:02:27 2022]
+Finished job 9.
+5 of 14 steps (36%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:27 2022]
+rule fastqc:
+    input: project/example_data/output/trim/fastp/shoot_2_trimmed.fastq.gz
+    output: project/example_data/output/trim/fastp/fastqc_after_trimming/shoot_2_trimmed_fastqc.html
+    jobid: 10
+    wildcards: condition=shoot, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:27 2022]
+rule fastqc:
+    input: project/example_data/output/trim/fastp/root_2_trimmed.fastq.gz
+    output: project/example_data/output/trim/fastp/fastqc_after_trimming/root_2_trimmed_fastqc.html
+    jobid: 4
+    wildcards: condition=root, replicate=2
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:28 2022]
+rule fastqc:
+    input: project/example_data/output/trim/fastp/shoot_1_trimmed.fastq.gz
+    output: project/example_data/output/trim/fastp/fastqc_after_trimming/shoot_1_trimmed_fastqc.html
+    jobid: 8
+    wildcards: condition=shoot, replicate=1
+    resources: tmpdir=/tmp
+
+
+[Sat Feb 26 11:02:28 2022]
+rule fastqc:
+    input: project/example_data/output/trim/fastp/root_1_trimmed.fastq.gz
+    output: project/example_data/output/trim/fastp/fastqc_after_trimming/root_1_trimmed_fastqc.html
+    jobid: 2
+    wildcards: condition=root, replicate=1
+    resources: tmpdir=/tmp
+
+[Sat Feb 26 11:02:28 2022]
+Finished job 13.
+6 of 14 steps (43%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:28 2022]
+rule fastqc:
+    input: project/example_data/output/trim/fastp/shoot_3_trimmed.fastq.gz
+    output: project/example_data/output/trim/fastp/fastqc_after_trimming/shoot_3_trimmed_fastqc.html
+    jobid: 12
+    wildcards: condition=shoot, replicate=3
+    resources: tmpdir=/tmp
+
+Started analysis of root_3_trimmed.fastq.gz
+Started analysis of shoot_2_trimmed.fastq.gz
+Approx 5% complete for root_3_trimmed.fastq.gz
+Started analysis of root_2_trimmed.fastq.gz
+Started analysis of shoot_1_trimmed.fastq.gz
+Approx 10% complete for root_3_trimmed.fastq.gz
+Approx 15% complete for root_3_trimmed.fastq.gz
+Approx 5% complete for root_2_trimmed.fastq.gz
+Approx 5% complete for shoot_2_trimmed.fastq.gz
+Approx 20% complete for root_3_trimmed.fastq.gz
+Approx 5% complete for shoot_1_trimmed.fastq.gz
+Approx 10% complete for root_2_trimmed.fastq.gz
+Approx 10% complete for shoot_2_trimmed.fastq.gz
+Approx 25% complete for root_3_trimmed.fastq.gz
+Approx 10% complete for shoot_1_trimmed.fastq.gz
+Approx 15% complete for root_2_trimmed.fastq.gz
+Approx 15% complete for shoot_2_trimmed.fastq.gz
+Approx 30% complete for root_3_trimmed.fastq.gz
+Started analysis of shoot_3_trimmed.fastq.gz
+Approx 15% complete for shoot_1_trimmed.fastq.gz
+Approx 20% complete for root_2_trimmed.fastq.gz
+Approx 20% complete for shoot_2_trimmed.fastq.gz
+Approx 35% complete for root_3_trimmed.fastq.gz
+Approx 20% complete for shoot_1_trimmed.fastq.gz
+Approx 25% complete for shoot_2_trimmed.fastq.gz
+Approx 40% complete for root_3_trimmed.fastq.gz
+Approx 25% complete for root_2_trimmed.fastq.gz
+Approx 25% complete for shoot_1_trimmed.fastq.gz
+Approx 45% complete for root_3_trimmed.fastq.gz
+Approx 30% complete for root_2_trimmed.fastq.gz
+Approx 30% complete for shoot_2_trimmed.fastq.gz
+Approx 5% complete for shoot_3_trimmed.fastq.gz
+Approx 30% complete for shoot_1_trimmed.fastq.gz
+Approx 50% complete for root_3_trimmed.fastq.gz
+Approx 35% complete for root_2_trimmed.fastq.gz
+Approx 35% complete for shoot_2_trimmed.fastq.gz
+Approx 10% complete for shoot_3_trimmed.fastq.gz
+Approx 40% complete for root_2_trimmed.fastq.gz
+Approx 35% complete for shoot_1_trimmed.fastq.gz
+Approx 40% complete for shoot_2_trimmed.fastq.gz
+Approx 55% complete for root_3_trimmed.fastq.gz
+Approx 15% complete for shoot_3_trimmed.fastq.gz
+Approx 40% complete for shoot_1_trimmed.fastq.gz
+Approx 60% complete for root_3_trimmed.fastq.gz
+Approx 45% complete for shoot_2_trimmed.fastq.gz
+Approx 45% complete for root_2_trimmed.fastq.gz
+Approx 45% complete for shoot_1_trimmed.fastq.gz
+Approx 20% complete for shoot_3_trimmed.fastq.gz
+Approx 50% complete for shoot_2_trimmed.fastq.gz
+Approx 65% complete for root_3_trimmed.fastq.gz
+Approx 50% complete for root_2_trimmed.fastq.gz
+Approx 50% complete for shoot_1_trimmed.fastq.gz
+Approx 55% complete for shoot_2_trimmed.fastq.gz
+Approx 25% complete for shoot_3_trimmed.fastq.gz
+Approx 70% complete for root_3_trimmed.fastq.gz
+Approx 55% complete for root_2_trimmed.fastq.gz
+Approx 55% complete for shoot_1_trimmed.fastq.gz
+Approx 60% complete for shoot_2_trimmed.fastq.gz
+Approx 60% complete for root_2_trimmed.fastq.gz
+Approx 30% complete for shoot_3_trimmed.fastq.gz
+Approx 75% complete for root_3_trimmed.fastq.gz
+Approx 65% complete for shoot_2_trimmed.fastq.gz
+Approx 60% complete for shoot_1_trimmed.fastq.gz
+Approx 65% complete for root_2_trimmed.fastq.gz
+Approx 80% complete for root_3_trimmed.fastq.gz
+Approx 35% complete for shoot_3_trimmed.fastq.gz
+Approx 65% complete for shoot_1_trimmed.fastq.gz
+Approx 70% complete for shoot_2_trimmed.fastq.gz
+Approx 85% complete for root_3_trimmed.fastq.gz
+Approx 40% complete for shoot_3_trimmed.fastq.gz
+Approx 70% complete for root_2_trimmed.fastq.gz
+Approx 70% complete for shoot_1_trimmed.fastq.gz
+Approx 75% complete for shoot_2_trimmed.fastq.gz
+Approx 90% complete for root_3_trimmed.fastq.gz
+Approx 45% complete for shoot_3_trimmed.fastq.gz
+Approx 75% complete for root_2_trimmed.fastq.gz
+Approx 75% complete for shoot_1_trimmed.fastq.gz
+Approx 80% complete for shoot_2_trimmed.fastq.gz
+Approx 95% complete for root_3_trimmed.fastq.gz
+Approx 50% complete for shoot_3_trimmed.fastq.gz
+Approx 80% complete for root_2_trimmed.fastq.gz
+Approx 80% complete for shoot_1_trimmed.fastq.gz
+Analysis complete for root_3_trimmed.fastq.gz
+Approx 85% complete for shoot_2_trimmed.fastq.gz
+Approx 85% complete for root_2_trimmed.fastq.gz
+Approx 55% complete for shoot_3_trimmed.fastq.gz
+Approx 85% complete for shoot_1_trimmed.fastq.gz
+Approx 90% complete for shoot_2_trimmed.fastq.gz
+Approx 90% complete for root_2_trimmed.fastq.gz
+Approx 60% complete for shoot_3_trimmed.fastq.gz
+Approx 90% complete for shoot_1_trimmed.fastq.gz
+Approx 95% complete for shoot_2_trimmed.fastq.gz
+Approx 95% complete for root_2_trimmed.fastq.gz
+Approx 65% complete for shoot_3_trimmed.fastq.gz
+Analysis complete for shoot_2_trimmed.fastq.gz
+Approx 95% complete for shoot_1_trimmed.fastq.gz
+Analysis complete for root_2_trimmed.fastq.gz
+Approx 70% complete for shoot_3_trimmed.fastq.gz
+Analysis complete for shoot_1_trimmed.fastq.gz
+Approx 75% complete for shoot_3_trimmed.fastq.gz
+Approx 80% complete for shoot_3_trimmed.fastq.gz
+Approx 85% complete for shoot_3_trimmed.fastq.gz
+Approx 90% complete for shoot_3_trimmed.fastq.gz
+Approx 95% complete for shoot_3_trimmed.fastq.gz
+Analysis complete for shoot_3_trimmed.fastq.gz
+Started analysis of root_1_trimmed.fastq.gz
+Approx 5% complete for root_1_trimmed.fastq.gz
+Approx 10% complete for root_1_trimmed.fastq.gz
+Approx 15% complete for root_1_trimmed.fastq.gz
+Approx 20% complete for root_1_trimmed.fastq.gz
+Approx 25% complete for root_1_trimmed.fastq.gz
+Approx 30% complete for root_1_trimmed.fastq.gz
+Approx 35% complete for root_1_trimmed.fastq.gz
+Approx 40% complete for root_1_trimmed.fastq.gz
+Approx 45% complete for root_1_trimmed.fastq.gz
+Approx 50% complete for root_1_trimmed.fastq.gz
+Approx 55% complete for root_1_trimmed.fastq.gz
+Approx 60% complete for root_1_trimmed.fastq.gz
+Approx 65% complete for root_1_trimmed.fastq.gz
+Approx 70% complete for root_1_trimmed.fastq.gz
+Approx 75% complete for root_1_trimmed.fastq.gz
+Approx 80% complete for root_1_trimmed.fastq.gz
+Approx 85% complete for root_1_trimmed.fastq.gz
+Approx 90% complete for root_1_trimmed.fastq.gz
+Approx 95% complete for root_1_trimmed.fastq.gz
+Analysis complete for root_1_trimmed.fastq.gz
+[Sat Feb 26 11:02:30 2022]
+Finished job 4.
+7 of 14 steps (50%) done
+[Sat Feb 26 11:02:30 2022]
+Finished job 10.
+8 of 14 steps (57%) done
+[Sat Feb 26 11:02:30 2022]
+Finished job 8.
+9 of 14 steps (64%) done
+[Sat Feb 26 11:02:30 2022]
+Finished job 6.
+10 of 14 steps (71%) done
+[Sat Feb 26 11:02:30 2022]
+Finished job 12.
+11 of 14 steps (79%) done
+[Sat Feb 26 11:02:31 2022]
+Finished job 2.
+12 of 14 steps (86%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:31 2022]
+rule summaryReport:
+    input: project/example_data/output/trim/fastp/fastqc_after_trimming/root_1_trimmed_fastqc.html, project/example_data/output/trim/fastp/fastqc_after_trimming/root_2_trimmed_fastqc.html, project/example_data/output/trim/fastp/fastqc_after_trimming/root_3_trimmed_fastqc.html, project/example_data/output/trim/fastp/fastqc_after_trimming/shoot_1_trimmed_fastqc.html, project/example_data/output/trim/fastp/fastqc_after_trimming/shoot_2_trimmed_fastqc.html, project/example_data/output/trim/fastp/fastqc_after_trimming/shoot_3_trimmed_fastqc.html
+    output: project/example_data/output/visualize/report/report_quality_control_after_trimming.html
+    jobid: 1
+    resources: tmpdir=/tmp
+
+
+  /// MultiQC 🔍 | v1.12
+
+|           multiqc | Search path : /home/zpzhou/wuyue/snakemake/RNApipe/project/example_data/output/trim/fastp/fastqc_after_trimming
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 12/12  
+|            fastqc | Found 6 reports
+|           multiqc | Compressing plot data
+|           multiqc | Report      : project/example_data/output/visualize/report/report_quality_control_after_trimming.html
+|           multiqc | Data        : project/example_data/output/visualize/report/report_quality_control_after_trimming_data
+|           multiqc | MultiQC complete
+[Sat Feb 26 11:02:40 2022]
+Finished job 1.
+13 of 14 steps (93%) done
+Select jobs to execute...
+
+[Sat Feb 26 11:02:40 2022]
+localrule all:
+    input: project/example_data/output/visualize/report/report_quality_control_after_trimming.html
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Sat Feb 26 11:02:40 2022]
+Finished job 0.
+14 of 14 steps (100%) done
+Complete log: /home/zpzhou/wuyue/snakemake/RNApipe/.snakemake/log/2022-02-26T110225.124346.snakemake.log
