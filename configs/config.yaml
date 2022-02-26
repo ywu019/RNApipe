@@ -17,6 +17,7 @@ ALIGN: hisat2 # [hisat2, STAR]
 BIGWIG: ["no"] # [yes, no]
 DEA: DESeq2 # [DESeq2, edgeR, limma]
 QUANTIFY: featureCounts #[featureCounts, htseq]
-
+THREAD: "10" # The number of threads you think should be set.
+TIME: "5" # The delay time you think you need.
 
 
