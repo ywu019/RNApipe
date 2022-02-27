@@ -4,8 +4,8 @@ READSPATH: project/example_data/fastq
 SAMPLES: configs/samples.tsv
 END: single
 OUTPUTPATH: project/example_data/output
-GENOME: project/example_data/ref/At10.dna.fa
-ANNOTATION: project/example_data/ref/At10_new.gtf
+GENOME: project/example_data/ref/At10_chr1.dna.fa
+ANNOTATION: project/example_data/ref/At10_chr1_new.gtf
 CONTROL: ["root"]
 TREAT: ["shoot"]
 SPEICE_ABBREVIATION: ath
